@@ -1,5 +1,6 @@
 package com.example.foregroundservice20022023
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -16,7 +17,13 @@ class MainActivity : AppCompatActivity() {
         btnStartService = findViewById(R.id.button_start_service)
 
         btnStartService.setOnClickListener {
+            val intent = Intent(this@MainActivity, MyService::class.java)
+            startService(intent)
+        }
 
+        btnStopService.setOnClickListener {
+            val intent = Intent(this@MainActivity, MyService::class.java)
+            stopService(intent)
         }
     }
 }
