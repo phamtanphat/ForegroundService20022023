@@ -14,5 +14,9 @@ class MainActivity : AppCompatActivity() {
 
         btnStopService = findViewById(R.id.button_stop_service)
         btnStartService = findViewById(R.id.button_start_service)
+
+        btnStartService.setOnClickListener {
+
+        }
     }
 }
