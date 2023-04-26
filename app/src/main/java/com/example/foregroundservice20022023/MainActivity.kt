@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
 
         btnStartService.setOnClickListener {
             val intent = Intent(this@MainActivity, MyService::class.java)
-            intent.putExtra("text", "abc")
             startService(intent)
         }
 
